@@ -4,34 +4,11 @@
 // node calc.js div 100 25 2
 // console.log(process.argv);
 
-const [operator, ...args] = process.argv.slice(2);
-const numbersArr = args.map((number) => Number(number));
-// console.log(numbersArr);
-
-const calculate = (op, numbers) => {
-  switch (op) {
-    case "sum":
-      return numbers.reduce((total, number) => total + number);
-    case "sub":
-      return numbers.reduce((total, number) => total - number);
-    case "mult":
-      return numbers.reduce((total, number) => total * number);
-    case "div":
-      return numbers.reduce((total, number) => total / number);
-    default:
-      "no such operator";
-  }
-};
-
-const result = calculate(operator, numbersArr);
-console.log(result);
-
+// decomposiition: 1 func = 1 file
 // const [operator, ...args] = process.argv.slice(2);
 // const numbersArr = args.map((number) => Number(number));
-// console.log(operator);
-// console.log(numbersArr);
 
-// function calculate(op, numbers) {
+// const calculate = (op, numbers) => {
 //   switch (op) {
 //     case "sum":
 //       return numbers.reduce((total, number) => total + number);
@@ -42,9 +19,9 @@ console.log(result);
 //     case "div":
 //       return numbers.reduce((total, number) => total / number);
 //     default:
-//       return "unknown operator type";
+//       "no such operator";
 //   }
-// }
+// };
 
 // const result = calculate(operator, numbersArr);
 // console.log(result);
